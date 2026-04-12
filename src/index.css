@@ -78,7 +78,7 @@ body {
   width: clamp(300px, 38vw, 620px);
   aspect-ratio: 1 / 1;
   opacity: var(--mandala-accent-opacity);
-  filter: sepia(1) saturate(2) brightness(0.7) contrast(1.1);
+  filter: sepia(1) saturate(1.6) brightness(0.75) contrast(1.1);
 }
 
 .mandala-corner.is-soft {
@@ -86,7 +86,7 @@ body {
 }
 
 .mandala-gold-filter {
-  filter: sepia(1) saturate(2) brightness(0.7) contrast(1.1);
+  filter: sepia(1) saturate(1.6) brightness(0.75) contrast(1.1);
 }
 
 .mandala-art {
@@ -141,7 +141,7 @@ body {
 }
 
 .floral-gold-filter {
-  filter: sepia(1) saturate(2) brightness(0.75) contrast(1.1) hue-rotate(-10deg);
+  filter: sepia(1) saturate(1.5) brightness(0.9) contrast(1.05) hue-rotate(-5deg);
 }
 
 .paper-grain {
