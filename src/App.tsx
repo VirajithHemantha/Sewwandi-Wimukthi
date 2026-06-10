@@ -5,7 +5,7 @@ import { Routes, Route, useSearchParams, Link } from "react-router-dom";
 
 /**
  * Premium Sri Lankan Wedding Invitation Theme
- * Names: Naween & Nadeesha
+ * Names: Sewwandi & Wimukthi
  * Background: Cream/Sand
  * Accents: Green/Brown
  */
@@ -140,7 +140,7 @@ function FloatingPetals({ disabled = false }: { disabled?: boolean }) {
 }
 
 function CountdownTimer() {
-  const targetDate = new Date("May 18, 2026 09:55:00").getTime();
+  const targetDate = new Date("July 2, 2026 09:38:00").getTime();
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
 
   React.useEffect(() => {
@@ -199,66 +199,7 @@ function CountdownTimer() {
   );
 }
 
-function WeddingTimeline() {
-  const schedule = [
-    { time: "09:30 AM", event: "Welcome Guests", icon: <Sparkles className="w-4 h-4" /> },
-    { time: "09:55 AM", event: "Poruwa Ceremony", icon: <Clock className="w-4 h-4" /> },
-    { time: "10:45 AM", event: "Registration", icon: <Sparkles className="w-4 h-4" /> },
-    { time: "11:30 AM", event: "Bar Open", icon: <Sparkles className="w-4 h-4" /> },
-    { time: "12:30 PM", event: "Buffet Open", icon: <Clock className="w-4 h-4" /> },
-    { time: "02:00 PM", event: "Dancing Floor Open", icon: <Sparkles className="w-4 h-4" /> },
-    { time: "03:30 PM", event: "Going Away", icon: <MapPin className="w-4 h-4" /> },
-  ];
 
-  return (
-    <section className="cv-auto py-24 md:py-36 bg-white relative overflow-hidden flex flex-col items-center">
-      <div className="absolute inset-0 opacity-[0.02] paper-grain pointer-events-none" />
-      <div className="max-w-4xl w-full px-4 relative z-10">
-        <div className="text-center mb-16 md:mb-24">
-          <span className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] text-theme-600 font-bold mb-4 block">The Schedule</span>
-          <h2 className="font-playball text-[3.5rem] md:text-[5.5rem] text-theme-900 leading-none">Wedding Timeline</h2>
-        </div>
-
-        <div className="relative">
-          {/* Vertical line with gradient */}
-          <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-theme-200 via-theme-400 to-theme-200 md:-translate-x-1/2 opacity-30" />
-
-          <div className="space-y-12 md:space-y-24">
-            {schedule.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative flex items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-              >
-                {/* Timeline Node */}
-                <div className="absolute left-[20px] md:left-1/2 w-3.5 h-3.5 bg-theme-500 rounded-full border-4 border-white shadow-md md:-translate-x-1/2 z-20" />
-
-                {/* Content Card */}
-                <div className={`flex-1 ml-12 md:ml-0 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                  <div className={`inline-block p-4 sm:p-6 bg-[#faf9f6]/80 backdrop-blur-sm border border-theme-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow max-w-sm w-full ${index % 2 === 0 ? "md:mr-[-10px]" : "md:ml-[-10px]"}`}>
-                    <div className={`flex items-center gap-4 mb-2 ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"}`}>
-                      <div className="p-2 bg-theme-100 rounded-lg text-theme-600">
-                        {item.icon}
-                      </div>
-                      <span className="text-[10px] md:text-[12px] font-bold text-theme-700 tracking-[0.2em] font-cinzel">{item.time}</span>
-                    </div>
-                    <h4 className="text-lg md:text-2xl font-playball text-stone-800">{item.event}</h4>
-                  </div>
-                </div>
-
-                {/* Empty space for desktop layout symmetry */}
-                <div className="hidden md:block flex-1" />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function WeddingInvitation() {
   const [searchParams] = useSearchParams();
@@ -369,7 +310,7 @@ function WeddingInvitation() {
     >
       <audio
         ref={audioRef}
-        src="/paulyudin-wedding-485932.mp3"
+        src="/calm_background.m4a"
         loop
       />
 
@@ -410,10 +351,10 @@ function WeddingInvitation() {
                 {guestName ? "Specially For You" : "Save the Date"}
               </span>
               <h1 className="font-cinzel text-4xl md:text-5xl text-stone-800 mb-4 tracking-tight">
-                {guestName ? guestName : "Lakshani & Imalka"}
+                {guestName ? guestName : "Sewwandi & Wimukthi"}
               </h1>
               <p className="text-stone-500 text-sm tracking-[0.2em] font-light">
-                {guestName ? "ARE CORDIALLY INVITED" : "MAY 18, 2026"}
+                {guestName ? "ARE CORDIALLY INVITED" : "JULY 02, 2026"}
               </p>
             </motion.div>
 
@@ -466,7 +407,7 @@ function WeddingInvitation() {
                 />
 
                 <div className="text-theme-100/30 rotate-90 whitespace-nowrap text-[10px] tracking-[0.55em] uppercase font-bold relative z-10">
-                  LAKSHANI & IMALKA
+                  SEWWANDI & WIMUKTHI
                 </div>
               </motion.div>
 
@@ -502,7 +443,7 @@ function WeddingInvitation() {
                 <div className="absolute inset-1.5 rounded-full border border-theme-600/40" />
                 <div className="absolute inset-3 rounded-full border border-theme-700/30" />
                 <div className="text-center relative z-10">
-                  <p className="font-cinzel text-[1.7rem] font-bold text-stone-800 leading-none">L&I</p>
+                  <p className="font-cinzel text-[1.7rem] font-bold text-stone-800 leading-none">S&W</p>
                   <div className="h-px w-12 bg-stone-400 mx-auto my-1.5" />
                   <p className="text-[8px] uppercase tracking-[0.35em] font-bold text-stone-600">Open</p>
                 </div>
@@ -553,7 +494,7 @@ function WeddingInvitation() {
                 transition={{ duration: 2, ease: "easeOut" }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-cinzel text-[40vw] text-theme-900 pointer-events-none whitespace-nowrap leading-none select-none z-0"
               >
-                L&I
+                S&W
               </motion.div>
 
               {/* Central Premium Arch Card */}
@@ -594,7 +535,7 @@ function WeddingInvitation() {
                       transition={{ delay: 1, duration: 0.8 }}
                       className="font-playball text-[3rem] sm:text-[3.5rem] md:text-[5.5rem] text-stone-800 leading-[1.1] drop-shadow-sm"
                     >
-                      Lakshani
+                      Sewwandi
                     </motion.h1>
                     <motion.div
                       initial={{ scale: 0 }}
@@ -610,7 +551,7 @@ function WeddingInvitation() {
                       transition={{ delay: 1.4, duration: 0.8 }}
                       className="font-playball text-[3rem] sm:text-[3.5rem] md:text-[5rem] text-stone-800 leading-[1.1] drop-shadow-sm"
                     >
-                      Imalka
+                      Wimukthi
                     </motion.h1>
                   </div>
 
@@ -626,8 +567,8 @@ function WeddingInvitation() {
                       <div className="h-px w-full bg-gradient-to-l from-transparent via-theme-300 to-theme-400" />
                     </div>
                     <div className="font-cinzel space-y-1">
-                      <p className="text-2xl md:text-4xl text-stone-700 tracking-[0.2em] md:tracking-[0.3em] font-bold">18 MAY 2026</p>
-                      <p className="text-xs md:text-sm text-theme-600 tracking-[0.2em] uppercase font-bold">Puwakdeniya, Kegalle</p>
+                      <p className="text-2xl md:text-4xl text-stone-700 tracking-[0.2em] md:tracking-[0.3em] font-bold">02 JULY 2026</p>
+                      <p className="text-xs md:text-sm text-theme-600 tracking-[0.2em] uppercase font-bold">Dambulla</p>
                     </div>
                   </motion.div>
                 </div>
@@ -689,9 +630,9 @@ function WeddingInvitation() {
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
                         <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved daughter of</p>
-                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">MR & MRS.Weerasinghe (Tharaka)</p>
+                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. & Mrs. H.M Wickramasekara</p>
                       </div>
-                      <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Lakshani</h3>
+                      <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Sewwandi</h3>
                     </div>
                   </motion.div>
 
@@ -723,9 +664,9 @@ function WeddingInvitation() {
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
                         <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved son of</p>
-                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">MR.& MRS.N.Senarathna (Thissa)</p>
+                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mrs. W.H Withanage & Mr. D.S.T Dassanayake (Late)</p>
                       </div>
-                      <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Imalka</h3>
+                      <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Wimukthi</h3>
                     </div>
                   </motion.div>
                 </div>
@@ -743,7 +684,7 @@ function WeddingInvitation() {
                     <div className="flex flex-col items-center flex-1">
                       <Calendar className="w-6 h-6 md:w-8 md:h-8 text-theme-500 mb-4 opacity-80" />
                       <p className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-stone-400 font-bold mb-3">The Date</p>
-                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">MONDAY, 18 MAY</p>
+                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">THURSDAY, 02 JULY</p>
                       <p className="font-cinzel text-lg md:text-xl text-theme-600 tracking-[0.3em] font-normal mt-2">2026</p>
                     </div>
 
@@ -762,8 +703,8 @@ function WeddingInvitation() {
                     <div className="flex flex-col items-center flex-1">
                       <Clock className="w-6 h-6 md:w-8 md:h-8 text-theme-500 mb-4 opacity-80" />
                       <p className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-stone-400 font-bold mb-3">The Time</p>
-                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">09:30 AM</p>
-                      <p className="font-cinzel text-xs md:text-sm text-theme-600 tracking-[0.2em] mt-3 uppercase">To 03:30 PM</p>
+                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">09:00 AM</p>
+                      <p className="font-cinzel text-xs md:text-sm text-theme-600 tracking-[0.2em] mt-3 uppercase">To 04:00 PM</p>
                     </div>
                   </div>
 
@@ -772,7 +713,7 @@ function WeddingInvitation() {
                       <div className="absolute inset-0 bg-theme-100 blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
                       <p className="relative text-stone-900 bg-white shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] text-[9px] md:text-[11px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase px-6 lg:px-10 py-4 lg:py-5 rounded-full border border-theme-300 flex items-center justify-center gap-4 w-full md:w-auto">
                         <span className="w-1.5 h-1.5 rotate-45 bg-theme-500 shrink-0" />
-                        <span className="whitespace-nowrap">Poruwa Ceremony at 09:55 AM</span>
+                        <span className="whitespace-nowrap">Poruwa Ceremony at 09:38 AM</span>
                         <span className="w-1.5 h-1.5 rotate-45 bg-theme-500 shrink-0" />
                       </p>
                     </div>
@@ -781,7 +722,7 @@ function WeddingInvitation() {
               </div>
             </section>
 
-            <WeddingTimeline />
+
 
             {/* Countdown Section */}
             <section className="cv-auto py-16 md:py-36 bg-[#faf9f6] relative border-y border-theme-100/30 flex flex-col items-center overflow-hidden">
@@ -841,8 +782,8 @@ function WeddingInvitation() {
                         <div className="w-8 h-px bg-theme-400" />
                         <span className="text-theme-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
                       </div>
-                      <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[5.5rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px]">
-                        Hotel Sleek Camelia
+                      <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px]">
+                        Tropical life resort and spa
                       </h2>
                     </div>
 
@@ -854,7 +795,7 @@ function WeddingInvitation() {
                           <MapPin className="w-4 h-4 text-theme-500" />
                         </div>
                         <p className="text-lg md:text-xl text-stone-700 font-cinzel font-medium leading-relaxed tracking-wide">
-                          No. 123, Puwakdeniya, Kegalle -<br /> Rambukkana Road, Karandupana.
+                          Dambulla, <br /> Sri Lanka.
                         </p>
                       </div>
 
@@ -865,7 +806,7 @@ function WeddingInvitation() {
 
                     <div className="pt-8 w-full md:w-auto">
                       <button
-                        onClick={() => window.open('https://maps.app.goo.gl/G8gETqwMaj2JjF4E6', '_blank')}
+                        onClick={() => window.open('https://maps.app.goo.gl/8zhpkrmz2a8GX3dx5', '_blank')}
                         className="w-full md:w-auto flex items-center justify-center gap-4 bg-theme-800 text-white px-10 py-5 rounded-full font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-theme-900 hover:shadow-xl hover:shadow-theme-900/20 transition-all duration-300 group"
                       >
                         <MapPin className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" />
@@ -886,7 +827,7 @@ function WeddingInvitation() {
                     {/* The Maps iframe */}
                     <div className="absolute inset-0 w-full h-full scale-[1.2] group-hover:scale-[1.15] transition-transform duration-[2s]">
                       <iframe
-                        src="https://maps.google.com/maps?q=Sleek%20Camellia%20Hotel%20Karandupana&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.google.com/maps?q=Tropical%20life%20resort%20and%20spa%20Dambulla&t=&z=14&ie=UTF8&iwloc=&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -910,11 +851,11 @@ function WeddingInvitation() {
             </section>
 
             {/* RSVP Section */}
-            <section className="cv-auto py-24 md:py-36 bg-[#1a1917] text-white relative overflow-hidden flex flex-col items-center">
-              {/* Opulent dark background */}
-              <div className="absolute inset-0 opacity-10 paper-grain pointer-events-none" />
-              <div className="absolute top-0 right-0 w-[60vw] h-[60vw] max-w-[800px] bg-theme-900 blur-[150px] rounded-full opacity-30 pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] max-w-[800px] bg-black blur-[150px] rounded-full opacity-40 pointer-events-none" />
+            <section className="cv-auto py-24 md:py-36 bg-[#faf9f6] text-stone-800 relative overflow-hidden flex flex-col items-center">
+              {/* Light opulent background */}
+              <div className="absolute inset-0 opacity-5 paper-grain pointer-events-none" />
+              <div className="absolute top-0 right-0 w-[60vw] h-[60vw] max-w-[800px] bg-theme-200 blur-[150px] rounded-full opacity-30 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] max-w-[800px] bg-theme-100 blur-[150px] rounded-full opacity-40 pointer-events-none" />
 
               <div className="container mx-auto px-4 max-w-2xl text-center relative z-10 w-full">
                 <motion.div
@@ -923,19 +864,19 @@ function WeddingInvitation() {
                   viewport={{ once: true }}
                   className="flex flex-col items-center"
                 >
-                  <p className="text-[10px] md:text-[12px] uppercase tracking-[0.5em] md:tracking-[0.8em] text-theme-300 font-bold mb-6">Will You Join Us?</p>
-                  <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[5.5rem] text-white mb-6 drop-shadow-md">RSVP</h2>
+                  <p className="text-[10px] md:text-[12px] uppercase tracking-[0.5em] md:tracking-[0.8em] text-theme-600 font-bold mb-6">Will You Join Us?</p>
+                  <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[5.5rem] text-theme-900 mb-6 drop-shadow-sm">RSVP</h2>
                   <div className="flex items-center gap-4 justify-center w-full mb-8 opacity-60">
-                    <div className="h-px w-16 md:w-24 bg-gradient-to-r from-transparent to-theme-300" />
-                    <div className="w-1.5 h-1.5 rotate-45 bg-theme-300" />
-                    <div className="h-px w-16 md:w-24 bg-gradient-to-l from-transparent to-theme-300" />
+                    <div className="h-px w-16 md:w-24 bg-gradient-to-r from-transparent to-theme-400" />
+                    <div className="w-1.5 h-1.5 rotate-45 bg-theme-400" />
+                    <div className="h-px w-16 md:w-24 bg-gradient-to-l from-transparent to-theme-400" />
                   </div>
-                  <p className="text-stone-300 text-sm md:text-base max-w-md mx-auto leading-relaxed mb-16 tracking-wide font-light">
+                  <p className="text-stone-500 text-sm md:text-base max-w-md mx-auto leading-relaxed mb-16 tracking-wide font-light">
                     We would be absolutely thrilled to celebrate with you. Kindly respond by the end of April.
                   </p>
 
                   {/* Premium RSVP Form */}
-                  <div className="w-full bg-white/5 backdrop-blur-md p-6 sm:p-8 md:p-12 rounded-[2rem] border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.5)]">
+                  <div className="w-full bg-white backdrop-blur-md p-6 sm:p-8 md:p-12 rounded-[2rem] border border-theme-100 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)]">
                     {submitted.rsvp ? (
                       <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -943,51 +884,51 @@ function WeddingInvitation() {
                         className="py-12 flex flex-col items-center gap-6"
                       >
                         <div className="w-16 h-16 bg-theme-600 rounded-full flex items-center justify-center text-white text-2xl">✓</div>
-                        <h3 className="font-playball text-3xl text-white">Thank You!</h3>
-                        <p className="text-stone-300 font-light tracking-wide text-sm">Your RSVP has been successfully received.</p>
+                        <h3 className="font-playball text-4xl text-theme-900">Thank You!</h3>
+                        <p className="text-stone-500 font-light tracking-wide text-sm">Your RSVP has been successfully received.</p>
                       </motion.div>
                     ) : (
                       <form className="space-y-8 text-left" onSubmit={handleRSVPSubmit}>
                         <div className="space-y-3">
-                          <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-theme-200 ml-2">Full Name</label>
+                          <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 ml-2">Full Name</label>
                           <input
                             type="text"
                             required
                             value={rsvpData.name}
                             onChange={(e) => setRsvpData({ ...rsvpData, name: e.target.value })}
                             placeholder="John & Jane Doe"
-                            className="w-full bg-transparent border-b border-white/20 px-2 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-theme-300 transition-colors font-cinzel text-lg md:text-xl tracking-wide"
+                            className="w-full bg-transparent border-b border-theme-200 px-2 py-3 text-stone-800 placeholder:text-stone-300 focus:outline-none focus:border-theme-400 transition-colors font-cinzel text-lg md:text-xl tracking-wide"
                           />
                         </div>
 
                         <div className="space-y-3">
-                          <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-theme-200 ml-2">Guests</label>
+                          <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 ml-2">Guests</label>
                           <div className="relative">
                             <select
                               value={rsvpData.guests}
                               onChange={(e) => setRsvpData({ ...rsvpData, guests: e.target.value })}
-                              className="w-full bg-transparent border-b border-white/20 px-2 py-3 text-white focus:outline-none focus:border-theme-300 transition-colors font-cinzel text-lg md:text-xl tracking-wide appearance-none cursor-pointer"
+                              className="w-full bg-transparent border-b border-theme-200 px-2 py-3 text-stone-800 focus:outline-none focus:border-theme-400 transition-colors font-cinzel text-lg md:text-xl tracking-wide appearance-none cursor-pointer"
                             >
-                              <option value="1" className="bg-[#1a1917] text-white">1 Guest (Just Me)</option>
-                              <option value="2" className="bg-[#1a1917] text-white">2 Guests</option>
-                              <option value="3" className="bg-[#1a1917] text-white">3 Guests</option>
-                              <option value="4" className="bg-[#1a1917] text-white">4 Guests</option>
-                              <option value="0" className="bg-[#1a1917] text-theme-300">Regretfully Decline</option>
+                              <option value="1" className="bg-white text-stone-800">1 Guest (Just Me)</option>
+                              <option value="2" className="bg-white text-stone-800">2 Guests</option>
+                              <option value="3" className="bg-white text-stone-800">3 Guests</option>
+                              <option value="4" className="bg-white text-stone-800">4 Guests</option>
+                              <option value="0" className="bg-white text-theme-400">Regretfully Decline</option>
                             </select>
                             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                              <div className="w-2 h-2 border-r border-b border-theme-300 rotate-45 transform -translate-y-[25%]" />
+                              <div className="w-2 h-2 border-r border-b border-stone-400 rotate-45 transform -translate-y-[25%]" />
                             </div>
                           </div>
                         </div>
 
                         <div className="space-y-3">
-                          <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-theme-200 ml-2">Dietary Notes</label>
+                          <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 ml-2">Dietary Notes</label>
                           <input
                             type="text"
                             value={rsvpData.dietary}
                             onChange={(e) => setRsvpData({ ...rsvpData, dietary: e.target.value })}
                             placeholder="Allergies, Vegan, etc."
-                            className="w-full bg-transparent border-b border-white/20 px-2 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-theme-300 transition-colors font-cinzel text-lg md:text-xl tracking-wide"
+                            className="w-full bg-transparent border-b border-theme-200 px-2 py-3 text-stone-800 placeholder:text-stone-300 focus:outline-none focus:border-theme-400 transition-colors font-cinzel text-lg md:text-xl tracking-wide"
                           />
                         </div>
 
@@ -995,7 +936,7 @@ function WeddingInvitation() {
                           <button
                             type="submit"
                             disabled={isSubmitting.rsvp}
-                            className={`w-full bg-theme-600 text-white py-5 rounded-full font-bold uppercase tracking-[0.3em] text-[10px] md:text-sm transition-all duration-300 group inline-flex justify-center items-center gap-4 ${isSubmitting.rsvp ? "opacity-50 cursor-not-allowed" : "hover:bg-theme-700 hover:shadow-[0_10px_30px_rgba(184,134,11,0.3)]"}`}
+                            className={`w-full bg-theme-800 text-white py-5 rounded-full font-bold uppercase tracking-[0.3em] text-[10px] md:text-sm transition-all duration-300 group inline-flex justify-center items-center gap-4 ${isSubmitting.rsvp ? "opacity-50 cursor-not-allowed" : "hover:bg-theme-900 hover:shadow-xl hover:shadow-theme-900/20"}`}
                           >
                             <span className="w-1.5 h-1.5 bg-white rotate-45 group-hover:scale-150 transition-transform" />
                             {isSubmitting.rsvp ? "Sending..." : "Send RSVP"}
@@ -1094,7 +1035,7 @@ function WeddingInvitation() {
                         Thank You
                       </div>
                       <p className="text-[9px] md:text-[11px] uppercase tracking-[0.8em] text-theme-600 font-bold relative z-10 bg-[#faf9f6] px-6 py-2 rounded-full border border-theme-100/50 shadow-sm">With Love</p>
-                      <h3 className="font-playball text-[3.2rem] sm:text-6xl md:text-8xl text-theme-900 relative z-10 drop-shadow-sm px-4 pt-4 leading-none">Lakshani & Imalka</h3>
+                      <h3 className="font-playball text-[3.2rem] sm:text-6xl md:text-8xl text-theme-900 relative z-10 drop-shadow-sm px-4 pt-4 leading-none">Sewwandi & Wimukthi</h3>
 
                       <motion.img
                         initial={{ opacity: 0, y: 24, scale: 0.95 }}
@@ -1110,47 +1051,11 @@ function WeddingInvitation() {
                 </div>
               </section>
 
-              {/* Add Your Memories Section */}
-              <section className="cv-auto py-24 md:py-32 bg-white relative overflow-hidden flex flex-col items-center border-t border-theme-100/50">
-                <div className="absolute inset-0 opacity-[0.02] paper-grain pointer-events-none" />
-                <div className="container mx-auto px-4 max-w-4xl text-center relative z-10 w-full">
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="flex flex-col items-center"
-                  >
-                    <div className="w-16 h-16 bg-theme-50 rounded-full flex items-center justify-center text-theme-600 mb-8 border border-theme-100 shadow-sm">
-                      <Camera className="w-8 h-8" />
-                    </div>
-                    <span className="text-[10px] md:text-[12px] uppercase tracking-[0.5em] text-theme-600 font-bold mb-4 block">Captures Of Love</span>
-                    <h2 className="font-playball text-[3.5rem] md:text-[5rem] text-theme-900 leading-none mb-8">Add Your Memories</h2>
-                    <p className="text-stone-500 text-sm md:text-lg leading-relaxed max-w-xl mx-auto mb-12 font-light tracking-wide">
-                      Your perspective is unique! We'd be honored if you could share the photos and videos you captured during our special day.
-                    </p>
-                    <button
-                      onClick={() => window.open('https://drive.google.com/drive/folders/12gPGGMVN5GwrbBTbRlmlCd1AQzW3S7DX', '_blank')}
-                      className="inline-flex items-center gap-4 bg-theme-800 text-white px-12 py-5 rounded-full font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-theme-900 hover:shadow-xl hover:shadow-theme-900/20 transition-all duration-300 group"
-                    >
-                      <span className="w-1.5 h-1.5 bg-white rotate-45 group-hover:scale-150 transition-transform" />
-                      Upload to Drive
-                      <ExternalLink className="w-4 h-4 opacity-70" />
-                      <span className="w-1.5 h-1.5 bg-white rotate-45 group-hover:scale-150 transition-transform" />
-                    </button>
-
-                    <div className="mt-16 flex items-center gap-3 opacity-40">
-                      <div className="h-px w-8 bg-theme-300" />
-                      <div className="w-1.5 h-1.5 rotate-45 bg-theme-400" />
-                      <div className="h-px w-8 bg-theme-300" />
-                    </div>
-                  </motion.div>
-                </div>
-              </section>
 
               {/* Footer */}
               <footer className="py-12 border-t border-theme-200/30 text-center relative z-10 space-y-3">
                 <p className="text-[8px] md:text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold">
-                  © 2026 Lakshani & Imalka. <span className="hidden md:inline">|</span><br className="md:hidden block mt-2" /> All rights reserved.
+                  © 2026 Sewwandi & Wimukthi. <span className="hidden md:inline">|</span><br className="md:hidden block mt-2" /> All rights reserved.
                 </p>
 
               </footer>
