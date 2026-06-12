@@ -310,7 +310,7 @@ function WeddingInvitation() {
     >
       <audio
         ref={audioRef}
-        src="/calm_background.m4a"
+        src="/paulyudin-wedding-485932.mp3"
         loop
       />
 
@@ -370,7 +370,7 @@ function WeddingInvitation() {
               }}
             >
               <div className="absolute -inset-8 bg-[radial-gradient(circle,_rgba(212,175,55,0.25)_0%,_rgba(241,228,192,0.15)_45%,_transparent_75%)] blur-3xl opacity-90" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#cea065] via-[#e2c299] to-[#cea065] rounded-[1.4rem] shadow-[0_28px_80px_-20px_rgba(206,160,101,0.35)] border border-[#4a3f12]/30 overflow-hidden" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#dcb174] via-[#eed1af] to-[#dcb174] rounded-[1.4rem] shadow-[0_28px_80px_-20px_rgba(206,160,101,0.35)] border border-[#4a3f12]/30 overflow-hidden" />
               <div className="absolute inset-[10px] rounded-[1.05rem] border border-[#4a3f12]/20 pointer-events-none" />
               <div className="absolute inset-0 opacity-[0.07] paper-grain-strong" />
 
@@ -386,7 +386,7 @@ function WeddingInvitation() {
 
               {/* Left Flap */}
               <motion.div
-                className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-tr from-[#a67c4d] via-[#cea065] to-[#e2c299] z-30 shadow-[8px_0_28px_rgba(42,32,10,0.3)] origin-left flex items-center justify-end pr-4 overflow-hidden rounded-l-[1.2rem]"
+                className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-tr from-[#ba9160] via-[#dcb174] to-[#eed1af] z-30 shadow-[8px_0_28px_rgba(42,32,10,0.3)] origin-left flex items-center justify-end pr-4 overflow-hidden rounded-l-[1.2rem]"
                 whileHover={{ rotateY: -14 }}
                 transition={{ type: "spring", stiffness: 110, damping: 16 }}
               >
@@ -413,7 +413,7 @@ function WeddingInvitation() {
 
               {/* Right Flap */}
               <motion.div
-                className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-tl from-[#a67c4d] via-[#cea065] to-[#e2c299] z-30 shadow-[-8px_0_28px_rgba(42,32,10,0.3)] origin-right flex items-center justify-start pl-4 overflow-hidden rounded-r-[1.2rem]"
+                className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-tl from-[#ba9160] via-[#dcb174] to-[#eed1af] z-30 shadow-[-8px_0_28px_rgba(42,32,10,0.3)] origin-right flex items-center justify-start pl-4 overflow-hidden rounded-r-[1.2rem]"
                 whileHover={{ rotateY: 14 }}
                 transition={{ type: "spring", stiffness: 110, damping: 16 }}
               >
@@ -438,7 +438,7 @@ function WeddingInvitation() {
               <motion.div
                 whileHover={{ scale: 1.1, rotate: -6 }}
                 whileTap={{ scale: 0.9 }}
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-28 h-28 rounded-full bg-gradient-to-br from-[#e2c299] via-white to-[#cea065] shadow-[0_20px_45px_-10px_rgba(206,160,101,0.5)] border-[5px] border-[#a67c4d] flex items-center justify-center group-hover:shadow-theme-500/40"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-28 h-28 rounded-full bg-gradient-to-br from-[#eed1af] via-white to-[#dcb174] shadow-[0_20px_45px_-10px_rgba(206,160,101,0.5)] border-[5px] border-[#ba9160] flex items-center justify-center group-hover:shadow-theme-500/40"
               >
                 <div className="absolute inset-1.5 rounded-full border border-theme-600/40" />
                 <div className="absolute inset-3 rounded-full border border-theme-700/30" />
@@ -872,7 +872,7 @@ function WeddingInvitation() {
                     <div className="h-px w-16 md:w-24 bg-gradient-to-l from-transparent to-theme-400" />
                   </div>
                   <p className="text-stone-500 text-sm md:text-base max-w-md mx-auto leading-relaxed mb-16 tracking-wide font-light">
-                    We would be absolutely thrilled to celebrate with you. Kindly respond by the end of April.
+                    We would be absolutely thrilled to celebrate with you. Kindly respond by the end of June.
                   </p>
 
                   {/* Premium RSVP Form */}
