@@ -211,7 +211,7 @@ function WeddingInvitation() {
   const [submitted, setSubmitted] = useState({ rsvp: false, wish: false });
 
   // IMPORTANT: Replace this with your actual Google Apps Script Web App URL
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw27GpF2TKE4l8yLdejrNk0HaEo_8GJjAUpsAvPEN2CPu-L7reajCuDRYRoHnwnwcS_/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxsxEJ0jSicdvTr3hDRfsNE_FprpkciFnIRn3GHD3k2Kezd3UBKjee-TdlTv06IcwvZ/exec";
 
   const handleRSVPSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -370,8 +370,8 @@ function WeddingInvitation() {
               }}
             >
               <div className="absolute -inset-8 bg-[radial-gradient(circle,_rgba(212,175,55,0.25)_0%,_rgba(241,228,192,0.15)_45%,_transparent_75%)] blur-3xl opacity-90" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#dcb174] via-[#eed1af] to-[#dcb174] rounded-[1.4rem] shadow-[0_28px_80px_-20px_rgba(206,160,101,0.35)] border border-[#4a3f12]/30 overflow-hidden" />
-              <div className="absolute inset-[10px] rounded-[1.05rem] border border-[#4a3f12]/20 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#ebd1b1] via-[#f8e9d5] to-[#ebd1b1] rounded-[1.4rem] shadow-[0_28px_80px_-20px_rgba(206,160,101,0.35)] border-[3px] border-[#4a3f12]/60 overflow-hidden" />
+              <div className="absolute inset-[10px] rounded-[1.05rem] border-[2px] border-[#4a3f12]/40 pointer-events-none" />
               <div className="absolute inset-0 opacity-[0.07] paper-grain-strong" />
 
               <motion.div
@@ -382,11 +382,11 @@ function WeddingInvitation() {
               />
 
               <div className="absolute top-[-1px] left-1/2 -translate-x-1/2 w-[88%] h-[44%] bg-gradient-to-b from-theme-200/90 to-theme-100/60 clip-path-envelope z-10" />
-              <div className="absolute top-[3px] left-1/2 -translate-x-1/2 w-[84%] h-[39%] border border-theme-400/30 clip-path-envelope z-10 opacity-60" />
+              <div className="absolute top-[3px] left-1/2 -translate-x-1/2 w-[84%] h-[39%] border-2 border-theme-800/40 clip-path-envelope z-10 opacity-70" />
 
               {/* Left Flap */}
               <motion.div
-                className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-tr from-[#ba9160] via-[#dcb174] to-[#eed1af] z-30 shadow-[8px_0_28px_rgba(42,32,10,0.3)] origin-left flex items-center justify-end pr-4 overflow-hidden rounded-l-[1.2rem]"
+                className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-tr from-[#cba57a] via-[#ebd1b1] to-[#f8e9d5] z-30 shadow-[8px_0_28px_rgba(42,32,10,0.3)] origin-left flex items-center justify-end pr-4 overflow-hidden rounded-l-[1.2rem] border-y-[3px] border-l-[3px] border-[#4a3f12]/60"
                 whileHover={{ rotateY: -14 }}
                 transition={{ type: "spring", stiffness: 110, damping: 16 }}
               >
@@ -397,23 +397,23 @@ function WeddingInvitation() {
                 {/* Envelope Illustrations */}
                 <InviteImage
                   src={mandalaImage}
-                  className="absolute -top-20 md:-top-28 -left-20 md:-left-28 w-56 md:w-72 h-56 md:h-72 opacity-25 mix-blend-multiply mandala-dark-filter"
+                  className="absolute -top-20 md:-top-28 -left-20 md:-left-28 w-56 md:w-72 h-56 md:h-72 opacity-40 mix-blend-multiply mandala-dark-filter"
                   alt=""
                 />
                 <InviteImage
                   src={mandalaImage}
-                  className="absolute -bottom-20 md:-bottom-28 -left-20 md:-left-28 w-56 md:w-72 h-56 md:h-72 opacity-20 mix-blend-multiply -rotate-90 mandala-dark-filter"
+                  className="absolute -bottom-20 md:-bottom-28 -left-20 md:-left-28 w-56 md:w-72 h-56 md:h-72 opacity-35 mix-blend-multiply -rotate-90 mandala-dark-filter"
                   alt=""
                 />
 
-                <div className="text-theme-100/30 rotate-90 whitespace-nowrap text-[10px] tracking-[0.55em] uppercase font-bold relative z-10">
+                <div className="text-theme-900/60 rotate-90 whitespace-nowrap text-[10px] tracking-[0.55em] uppercase font-bold relative z-10">
                   SEWWANDI & WIMUKTHI
                 </div>
               </motion.div>
 
               {/* Right Flap */}
               <motion.div
-                className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-tl from-[#ba9160] via-[#dcb174] to-[#eed1af] z-30 shadow-[-8px_0_28px_rgba(42,32,10,0.3)] origin-right flex items-center justify-start pl-4 overflow-hidden rounded-r-[1.2rem]"
+                className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-tl from-[#cba57a] via-[#ebd1b1] to-[#f8e9d5] z-30 shadow-[-8px_0_28px_rgba(42,32,10,0.3)] origin-right flex items-center justify-start pl-4 overflow-hidden rounded-r-[1.2rem] border-y-[3px] border-r-[3px] border-[#4a3f12]/60"
                 whileHover={{ rotateY: 14 }}
                 transition={{ type: "spring", stiffness: 110, damping: 16 }}
               >
@@ -424,12 +424,12 @@ function WeddingInvitation() {
                 {/* Envelope Illustrations */}
                 <InviteImage
                   src={mandalaImage}
-                  className="absolute -top-20 md:-top-28 -right-20 md:-right-28 w-56 md:w-72 h-56 md:h-72 opacity-25 mix-blend-multiply rotate-90 mandala-dark-filter"
+                  className="absolute -top-20 md:-top-28 -right-20 md:-right-28 w-56 md:w-72 h-56 md:h-72 opacity-40 mix-blend-multiply rotate-90 mandala-dark-filter"
                   alt=""
                 />
                 <InviteImage
                   src={mandalaImage}
-                  className="absolute -bottom-20 md:-bottom-28 -right-20 md:-right-28 w-56 md:w-72 h-56 md:h-72 opacity-20 mix-blend-multiply rotate-180 mandala-dark-filter"
+                  className="absolute -bottom-20 md:-bottom-28 -right-20 md:-right-28 w-56 md:w-72 h-56 md:h-72 opacity-35 mix-blend-multiply rotate-180 mandala-dark-filter"
                   alt=""
                 />
               </motion.div>
@@ -438,7 +438,7 @@ function WeddingInvitation() {
               <motion.div
                 whileHover={{ scale: 1.1, rotate: -6 }}
                 whileTap={{ scale: 0.9 }}
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-28 h-28 rounded-full bg-gradient-to-br from-[#eed1af] via-white to-[#dcb174] shadow-[0_20px_45px_-10px_rgba(206,160,101,0.5)] border-[5px] border-[#ba9160] flex items-center justify-center group-hover:shadow-theme-500/40"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-28 h-28 rounded-full bg-gradient-to-br from-[#f8e9d5] via-white to-[#ebd1b1] shadow-[0_20px_45px_-10px_rgba(206,160,101,0.5)] border-[5px] border-[#8a603c] flex items-center justify-center group-hover:shadow-theme-500/40"
               >
                 <div className="absolute inset-1.5 rounded-full border border-theme-600/40" />
                 <div className="absolute inset-3 rounded-full border border-theme-700/30" />
